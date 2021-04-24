@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.color {
+    background-color: blueviolet;
+    color: white;
+}
+
+.spa-title {
+    background-color: rgb(230, 122, 0);
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.item-menu {
+    background-color: rgb(230, 122, 0);
+    display: none;
+}
+
+table {
+    width: 100%;
+  }
+
+img#icone-usuario {
+    width: 80px;
+    margin: 0 20px;
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-usuario ul li {
+    list-style-type: none;
+}
+
+.conteudo-usuario ul {
+    width: 180px;
+    margin: 0;
+}
+
+.conteudo-usuario ul li a {
+    display: block;
+    width: 100%;
+}
+
+
+  

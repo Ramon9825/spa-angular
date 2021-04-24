@@ -1,0 +1,59 @@
+<mat-toolbar class="spa-title">
+    <button (click)="onShowHide()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon class="menu">menu</mat-icon>
+    </button>
+    <span>Usuários</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-toolbar-row class="item-menu" #boolean [ngStyle]="{'display': display}">
+    <button (click)="onNavigate()" mat-raised-button class="color">Cadastrar</button>
+  </mat-toolbar-row>
+
+  <table class="table table-hover">
+    <thead class="thead-dark " >
+      <tr>
+        <th scope="col">Usuários</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of listaUsuario">
+        <td scope="row">
+          <div class="info-usuario">
+            <img id="icone-usuario" [src]="element.urlImagem" alt="">
+            <div class="conteudo-usuario">
+              <ul>
+                <li> 
+                  <span>{{ element.nome }} </span>
+                </li>
+                <li>
+                  <a href="#">{{ element.siteUsuario }}</a>
+                </li>
+                <li>
+                  <a href="#">{{ element.email }}</a>
+                </li>
+                <li>
+                  Adicionado em {{ element.data }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td scope="row">
+          <button mat-raised-button color="primary">Editar</button>
+        </td>
+        <td scope="row">
+          <button mat-raised-button color="warn" (click)="excluir(element)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

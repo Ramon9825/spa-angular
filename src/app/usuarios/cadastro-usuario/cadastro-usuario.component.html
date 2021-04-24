@@ -1,0 +1,61 @@
+<mat-toolbar class="spa-title">
+    <button (click)="onShowHide()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon class="menu">menu</mat-icon>
+    </button>
+    <span>Cadastro de usuários</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-toolbar-row class="item-menu" #boolean [ngStyle]="{'display': display}">
+    <button (click)="onNavigate()" mat-raised-button class="color">Voltar</button>
+  </mat-toolbar-row>
+
+<div >
+  <form class="formulario" [formGroup]="cadastro">
+    <mat-form-field appearance="fill">
+      <mat-label>Digite seu nome *</mat-label>
+      <input matInput formControlName="nome">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Digite seu email *</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Digite a url de sua foto</mat-label>
+      <input matInput formControlName="urlImagem">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Digite a url de seu site</mat-label>
+      <input matInput formControlName="siteUsuario">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Data</mat-label>
+      <input matInput readonly [matDatepicker]="picker" formControlName="data" (click)="picker.open()">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Textarea</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    
+      <mat-card-actions>
+        <button class="salvar" type="submit" color="accent" mat-raised-button (click)="salvar()">Salvar</button>
+        <button type="reset" color="warn" mat-raised-button>Cancelar</button>
+      </mat-card-actions>
+  </form>
+    
+    
+    
+</div>

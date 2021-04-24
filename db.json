@@ -1,0 +1,20 @@
+{
+  "usuarios": [
+    {
+      "id": "0",
+      "nome": "Joana",
+      "email": "joana@email.com",
+      "urlImagem": "https://d29fhpw069ctt2.cloudfront.net/icon/image/37746/preview.svg",
+      "siteUsuario": "Não informado",
+      "data": "12-05-2021"
+    },
+    {
+      "id": "1",
+      "nome": "Joana",
+      "email": "joana@email.com",
+      "urlImagem": "https://d29fhpw069ctt2.cloudfront.net/icon/image/37746/preview.svg",
+      "siteUsuario": "Não informado",
+      "data": "12-05-2021"
+    }
+  ]
+}

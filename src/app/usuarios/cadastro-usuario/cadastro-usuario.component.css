@@ -1,0 +1,30 @@
+.spa-title {
+    background-color: rgb(230, 122, 0);
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.item-menu {
+    background-color: rgb(230, 122, 0);
+    display: none;
+}
+
+.color {
+    background-color: blueviolet;
+    color: white;
+}
+
+.formulario {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.salvar {
+    margin-right: 10px;
+}
